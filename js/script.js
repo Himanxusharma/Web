@@ -12,4 +12,27 @@ var element;
 // document.querySelector("#msg").classList.add("def");
 // document.querySelector("#msg").classList.remove("def");
 // element = document.querySelector("#msg").classList;
+
+// document.getElementById("msg").onclick=abc;
+// document.getElementById("msg").onmousedown=abc;
+
+function abc()
+{
+    document.getElementById("msg").style.color="white";
+    document.getElementById("msg").style.backgroundColor="black";
+}
+
 // console.log(element);
+
+document.getElementById("msg").addEventListener("mouseleave",abc);
+document.getElementById("msg").addEventListener("click",function () {
+    this.style.border="10px solid crimson";
+
+});
+
+document.getElementById("msg").addEventListener('click',xyz);
+
+function xyz(){
+    document.getElementById("msg").removeEventListener('mouseleave',abc);
+
+}
